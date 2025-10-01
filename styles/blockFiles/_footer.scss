@@ -70,10 +70,11 @@
   @media (max-width: 600px) {
     .footer-input {
       input {
-        width: 250px;
+        padding-left: 15px;
+        width: 200px;
       }
       .footer-button {
-        transform: translateX(100%);
+        transform: translateX(133%);
         width: 100px;
         font-size: 0.8rem;
       }
