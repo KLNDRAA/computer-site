@@ -1,0 +1,112 @@
+@use '../baseFiles/variables' as v;
+
+.section {
+  height: 130px;
+  background-color: v.$blackGrayColor;
+}
+
+.section__students {
+  align-items: center;
+  gap: 20px;
+  padding-top: 40px;
+  margin-top: 220px;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 22.22% 22.22% 55.56%;
+  grid-template-rows: auto auto;
+}
+
+
+
+.buttom-button {
+  font-size: 16px;
+  color: v.$white-color-1;
+  font-weight: bold;
+  width: 170px;
+  height: 45px;
+  background-image: linear-gradient(to right, v.$gradientOrangeButton);
+}
+
+.progress-spread {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.students-number {
+  font-weight: 600;
+  color: v.$white-color-1;
+  opacity: unset !important; 
+}
+
+.spread-number {
+  color: rgb(v.$white-color-1, 0.4);
+}
+
+.students-text {
+  color: rgb(v.$white-color-1, 0.4);
+}
+
+
+
+@media (max-width: 1111px) {
+  .students__education {
+    grid-column: 2 / 4;
+  }
+  .section__progress {
+    grid-column: 1 / -1;
+  }
+  @media (max-width: 600px) {
+    .section__students {
+      grid-template-columns: auto auto auto;
+    }
+  }
+}
+
+@media (max-width: 1111px) {
+  .section {
+    height: 180px;
+  }
+  @media (max-width: 523px) {
+    .section {
+      height: 200px;
+    }
+    @media (max-width: 518px) {
+      .section {
+        height: 215px;
+      }
+    }
+  }
+}
+
+
+// styles progress bar in section students
+progress {
+  max-width: 37,25%;
+  margin-inline: auto;
+  border: none;
+  height: 6px;
+  width: 100%;
+  background-color: v.$white-color-1;
+}
+
+progress::-webkit-progress-bar {
+  border: none;
+  background-color: v.$white-color-1;
+}
+
+progress::-webkit-progress-value {
+  background-image: linear-gradient(to right, v.$gradientButtonOne);;
+}
+
+progress::-moz-progress-bar {
+  background-color: v.$white-color-1;
+}
+// ....
+
+
+// .grid-students {
+//   display: grid;
+//   grid-template-columns: 170px 50px 50px;
+// }

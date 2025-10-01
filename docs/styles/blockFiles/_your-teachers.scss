@@ -1,0 +1,62 @@
+@use '../baseFiles/variables' as v;
+
+.teacher-text {
+  .teacher-img {
+    rotate: -43deg;
+    margin-right: 40px;
+    max-width: 50px;
+    max-height: 50px;
+    aspect-ratio: 50 / 50;
+    width: 100%;
+
+  }
+  display: flex;
+  margin-top: 200px;
+  margin-bottom: 150px;
+}
+
+@media (max-width: 1171px) {
+  .teacher-text {
+    margin-top: 80px;
+    margin-bottom: 0px;
+  }
+}
+
+.teachers {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.teacher-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .teacher-name {
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+  .teacher-button {
+    margin-top: 30px;
+    background-color: rgb(v.$white-color-1, 0);
+    color: v.$white-color-1;
+    outline: 2px solid white;
+  }
+
+}
+  @media (max-width: 1171px) {
+    .teacher-block {
+      margin-top: 30px;
+    }
+  }
+

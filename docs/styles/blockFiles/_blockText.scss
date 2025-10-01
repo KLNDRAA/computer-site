@@ -1,0 +1,44 @@
+@use '../baseFiles/variables' as v;
+
+
+
+.timer {
+  grid-template-columns: repeat(auto-fit, 115px);
+  grid-template-rows: repeat(auto-fit, 115px);
+  grid-auto-rows: 115px;
+  display: grid;
+  margin-top: 50px;
+  gap: 30px;
+}
+
+.timer-block {
+  background-color: v.$blackGrayColor;
+  align-content: center;
+  justify-items: center;
+  line-height: 1.4;
+}
+
+.timer__number {
+  color: v.$white-color-1;
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+.timer-text {
+  opacity: 40%;
+}
+
+.text-info {
+  margin-top: 200px;
+}
+
+@media (max-width: 400px) {
+  .timer {
+  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-rows: repeat(auto-fit, 100px);
+  grid-auto-rows: 100px;
+  display: grid;
+  margin-top: 50px;
+  gap: 30px;
+  }
+}

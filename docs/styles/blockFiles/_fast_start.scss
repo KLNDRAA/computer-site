@@ -1,0 +1,140 @@
+@use '../baseFiles/variables' as v;
+
+
+.fast_start {
+  margin-top: 200px;
+
+  .start_back-text {
+    margin-top: 50px;
+    color: rgb(v.$white-color-1, 0.5);
+  }
+
+  .start-semicircle {
+    padding-right: 20px;
+  }
+  .semicircle_img {
+    max-width: 50px;
+    max-height: 50px;
+    display: flex;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+  }
+
+  .start-text {
+    display: flex;
+  }
+  
+  .section_procent {
+    margin-top: 50px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 70px 115px auto;
+    grid-template-areas: 
+      "block1 block2 block3 block4"
+      "block5 block6 block7 block8"
+      "block9 block10 block11 block12";
+  }
+
+
+  .procent_text-style {
+    color: rgb(v.$white-color-1, 0.5);
+    padding-right: 18px;
+  }
+  
+
+  @media (max-width: 500px) {
+    .section_procent {
+      margin-top: 20px;
+    }
+    .procent_text-style {
+      font-size: 0.83rem;
+      padding-right: 5px;
+    }
+    .start_back-text {
+      margin-top: 20px;
+      font-size: 0.83rem;
+    }
+  }
+
+
+  //! Procent 100%
+  .procent-100 {
+    grid-area: block1;
+  }
+  .procent-100-block {
+    grid-area: block5;
+    margin-inline: auto;
+    width: 100%;
+    background-image: linear-gradient(to right, v.$gradientButtonOne);
+    height: 80px;
+  }
+
+  .procent-100-text {
+    grid-area: block9;
+  }
+
+  //! Procent 75%
+  .procent-75 {
+    grid-area: block2;
+  }
+
+  .procent-75-block {
+    grid-area: block6;
+    margin-inline: auto;
+    width: 100%;
+    background-image: linear-gradient(to left, v.$gradientButtonOne);
+    height: 60px;
+  }
+
+  .procent-75-text {
+    grid-area: block10;
+  }
+
+  //! Procent 50%
+  .procent-50 {
+    grid-area: block3;
+  }
+
+  .procent-50-block {
+    grid-area: block7;
+    margin-inline: auto;
+    width: 100%;
+    background-image: linear-gradient(to right, v.$gradientButtonOne);
+    height: 30px;
+  }
+
+  .procent-50-text {
+    grid-area: block11;
+  }
+
+  //! Total procent
+  .total {
+    grid-area: block4;
+  }
+
+  .total-block {
+    grid-area: block8;
+    margin-inline: auto;
+    width: 100%;
+    background-image: linear-gradient(to left, v.$gradientButtonOne);
+    height: 10px;
+  }
+
+  .total-text {
+    grid-area: block12;
+  }
+}
+
+
+@media (max-width: 1171px) {
+  .fast_start {
+    margin-top: 50px;
+  }
+}
+
+
+
+
+
+

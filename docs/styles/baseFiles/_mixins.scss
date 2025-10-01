@@ -1,0 +1,42 @@
+@use './variables' as vb;
+
+// breakpoints
+@mixin respond-to($breakpoints) {
+
+  @if map-has-key(vb.$breakpoints, $breakpoints) {
+
+    @media (max-width: map-get(vb.$breakpoints)) {
+
+      @content;
+    }
+  }
+}
+
+
+// Button
+@mixin button-style($gradient: vb.$gradientButtonOne, $width: vb.$button-width, $height: vb.$button-height) {
+  background-image: linear-gradient(to right, $gradient);
+  width: $width;
+  height: $height;
+  border-radius: vb.$border-radius;
+  cursor: pointer;
+  transition: vb.$transition-normal;
+
+  &:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+// center-flex
+@mixin center-flex ($direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+// spacing
+@mixin spacing($property, $size) {
+  #{$property}: map-get(vb.$spacing, $size)
+}

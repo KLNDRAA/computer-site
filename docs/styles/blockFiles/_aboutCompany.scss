@@ -1,0 +1,72 @@
+@use '../baseFiles/variables' as v;
+
+.about__company {
+  display: flex;
+  margin-top: calc(18px + 200px);
+}
+
+.company-text {
+  margin-left: 130px;
+}
+.text-parag {
+  line-height: 1.6;
+  margin-top: 45px
+}
+
+
+.box {
+  align-self: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  max-width: max(27,6%, 530px);
+  width: 100%;
+  aspect-ratio: 530 / 500;
+  background-color: rgb(v.$white-color-1, 0);
+  border: 30px solid;
+  border-image: linear-gradient(to right, v.$gradientButtonOne) 1;
+}
+
+.computer_rtx {
+  position: absolute;
+  top: 75px;
+  max-width: max(23,22%, 446px);
+  width: 100%;
+  aspect-ratio: 446 / 446;
+}
+
+@media (max-width: 758px) {
+  .box {
+  position: relative;
+  max-width: max(27,6%, 530px);
+  width: 100%;
+  aspect-ratio: 530 / 500;
+  background-color: rgb(v.$white-color-1, 0);
+  border: 15px solid;
+  border-image: linear-gradient(to right, v.$gradientButtonOne) 1;
+  }
+  .computer_rtx {
+    position: absolute;
+    top: 40px;
+  }
+  .about__company {
+    margin-top: calc(18px + 50px)
+  }
+}
+
+@media (max-width: 1171px) {
+  .about__company {
+    flex-flow: row wrap;
+    margin-top: calc(18px + 50px);
+  }
+  .company-text {
+    margin-left: 0px;
+    margin-top: 50px;
+  }
+  .text-parag {
+    font-size: 0.8rem;
+    margin-top: 25px;
+  }
+}
+
+
+

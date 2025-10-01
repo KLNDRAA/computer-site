@@ -1,0 +1,83 @@
+
+.take_proff-now {
+  text-align: center;
+
+  h2 {
+    margin-top: 200px;
+    margin-bottom: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 1171px) {
+    h2 {
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .benefits {
+    display: grid;
+    place-content: center;
+    place-items: center;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+      "icon1 icon2 icon3"
+      "benefit1 benefit2 benefit3"
+      "description1 description2 description3";
+    img {
+      margin-bottom: 30px;
+    }
+  }
+
+    //? practice skils
+    .practice-img {
+      grid-area: icon1;
+    }
+    .practice-h4 {
+      grid-area: benefit1;
+    }
+    .practice-p {
+      grid-area: description1;
+    }
+
+    //? modern equipment
+    .modern-img {
+      grid-area: icon2;
+    }
+    .modern-h4 {
+      grid-area: benefit2;
+    }
+    .modern-p {
+      grid-area: description2;
+    }
+
+    //? Sertificate
+    .sertificate-img {
+      grid-area: icon3;
+    }
+    .sertificate-h4 {
+      grid-area: benefit3;
+    }
+    .sertificate-p {
+      grid-area: description3;
+  }
+  @media (max-width: 560px) {
+  .benefits {
+    display: grid;
+    grid-template-areas: 
+      "icon1 benefit1"
+      "description1 description1"
+      "icon2 benefit2"
+      "description2 description2"
+      "icon3 benefit3"          // ✅ 2 элемента
+      "description3 description3"; 
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto auto auto auto;
+  }
+}
+}
+

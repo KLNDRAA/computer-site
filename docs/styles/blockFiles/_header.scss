@@ -1,0 +1,117 @@
+@use '../baseFiles/variables' as v;
+
+.header {
+  display: flex;
+  width: 100%;
+}
+
+.header__button {
+  background-image: linear-gradient(to right, v.$gradientButtonOne);
+  width: 185px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 38px;
+  width: 100%;
+}
+
+[class="header__nav"] {
+  max-width: 91.65%;
+  margin-inline: auto;
+}
+
+.nav__list {
+  display: flex;
+  color: v.$blackPurple;
+  gap: 55px;
+  align-items: center;
+}
+
+.button-link {
+  color: v.$white-color-1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+    /* Базовые стили */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .burger__button {
+      background-image: linear-gradient(to right, v.$gradientButtonOne);
+      color: v.$white-color-1;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: block; /* Чтобы кнопка не занимала всю ширину */
+    }
+
+    .dropdown-content {
+      display: none; /* Скрыто по умолчанию */
+      position: absolute;
+      background-image: linear-gradient(to right, v.$gradientButtonOne);
+      min-width: 160px;
+      border-radius: 5px;
+      box-shadow: 0px 8px 16px 0px v.$lightGrayColor;
+      z-index: 1; /* Для перекрытия других элементов */
+    }
+
+    .dropdown-content a {
+      color: v.$white-color-1;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block; /* Чтобы ссылки занимали всю ширину */
+    }
+
+    /* Эффекты при наведении на ссылку */
+    .dropdown-content a:hover {
+      background-color: v.$white-color-1;
+    }
+
+    /* Показать раскрывающийся список при наведении на кнопку */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Показать раскрывающийся список при наведении на кнопку */
+    .dropdown:hover .burger__button {
+      background-color: v.$lightPurple;
+    }
+
+@media (max-width: 1140px) {
+  .nav__list {
+    gap: 15px;
+  }
+  .header__button {
+    width: 130px;
+  }
+
+  @media (max-width: 830px) {
+  .nav__list {
+    display: none;
+  }
+}
+}
+
+@media (min-width: 830px) {
+  .burger__button {
+    display: none;
+  }
+  .dropdown-content {
+    display: none;
+  }
+}
+
