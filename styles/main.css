@@ -707,15 +707,15 @@ progress::-moz-progress-bar {
   margin-bottom: 150px;
 }
 .teacher-text .teacher-img {
-  rotate: -43deg;
-  margin-right: 40px;
   max-width: 50px;
   max-height: 50px;
+  margin-right: 40px;
+  rotate: -43deg;
   aspect-ratio: 50/50;
   width: 100%;
 }
 
-@media (max-width: 1171px) {
+@media (max-width: 1200px) {
   .teacher-text {
     margin-top: 80px;
     margin-bottom: 0px;
@@ -740,8 +740,8 @@ progress::-moz-progress-bar {
   transform: scale(1.05);
 }
 .teacher-block .teacher-name {
-  margin-top: 40px;
-  margin-bottom: 15px;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 .teacher-block .teacher-button {
   margin-top: 30px;
@@ -750,7 +750,7 @@ progress::-moz-progress-bar {
   outline: 2px solid white;
 }
 
-@media (max-width: 1171px) {
+@media (max-width: 1200px) {
   .teacher-block {
     margin-top: 30px;
   }

@@ -1,3 +1,4 @@
+@use 'sass:map';
 
 // colors
 
@@ -30,12 +31,16 @@ $border-radius: 50px;
 // Indents
 
 $spacing: (
+  zr: 0px,
   xs: 10px,
   sm: 20px,
   md: 30px,
+  mlg: 40px,
   lg: 50px,
   xl: 80px,
-  xxl: 120px
+  xxl: 120px,
+  xxs: 150px,
+  xxx: 200px
 );
 
 // Transitions

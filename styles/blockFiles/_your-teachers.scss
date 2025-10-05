@@ -1,24 +1,25 @@
 @use '../baseFiles/variables' as v;
+@use '../baseFiles/mixins' as m;
 
 .teacher-text {
   .teacher-img {
+    @include m.spacing(max-width, lg);
+    @include m.spacing(max-height, lg); 
+    @include m.spacing(margin-right, mlg);
     rotate: -43deg;
-    margin-right: 40px;
-    max-width: 50px;
-    max-height: 50px;
     aspect-ratio: 50 / 50;
     width: 100%;
 
   }
   display: flex;
-  margin-top: 200px;
-  margin-bottom: 150px;
+  @include m.spacing(margin-top, xxx);
+  @include m.spacing(margin-bottom, xxs);
 }
 
-@media (max-width: 1171px) {
+@include m.respond-to(large) {
   .teacher-text {
-    margin-top: 80px;
-    margin-bottom: 0px;
+    @include m.spacing(margin-top, xl);
+    @include m.spacing(margin-bottom, zr);
   }
 }
 
@@ -43,20 +44,20 @@
   }
 
   .teacher-name {
-    margin-top: 40px;
-    margin-bottom: 15px;
+    @include m.spacing(margin-top, lg);
+    @include m.spacing(margin-bottom, sm);
   }
   .teacher-button {
-    margin-top: 30px;
+    @include m.spacing(margin-top, md);
     background-color: rgb(v.$white-color-1, 0);
     color: v.$white-color-1;
     outline: 2px solid white;
   }
-
 }
-  @media (max-width: 1171px) {
-    .teacher-block {
-      margin-top: 30px;
-    }
+
+@include m.respond-to(large) {
+  .teacher-block {
+    @include m.spacing(margin-top, md);
   }
+}
 
