@@ -34,37 +34,38 @@
   }
 
     //? practice skils
-    .practice-img {
+    .practice__img {
       grid-area: icon1;
     }
-    .practice-h4 {
+    .practice__title {
       grid-area: benefit1;
     }
-    .practice-p {
+    .practice__description {
       grid-area: description1;
     }
 
     //? modern equipment
-    .modern-img {
+    .modern__img {
       grid-area: icon2;
     }
-    .modern-h4 {
+    .modern__title {
       grid-area: benefit2;
     }
-    .modern-p {
+    .modern__description {
       grid-area: description2;
     }
 
     //? Sertificate
-    .sertificate-img {
+    .sertificate__img {
       grid-area: icon3;
     }
-    .sertificate-h4 {
+    .sertificate__title {
       grid-area: benefit3;
     }
-    .sertificate-p {
+    .sertificate__description {
       grid-area: description3;
-  }
+    }
+
   @media (max-width: 560px) {
   .benefits {
     display: grid;

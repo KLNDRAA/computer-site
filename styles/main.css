@@ -200,7 +200,7 @@ a:focus {
   opacity: 40%;
 }
 
-.text-info {
+.block__title {
   margin-top: 200px;
 }
 
@@ -263,7 +263,7 @@ a:focus {
   .students__education {
     grid-column: 2/4;
   }
-  .section__progress {
+  .students__progress {
     grid-column: 1/-1;
   }
 }
@@ -394,10 +394,10 @@ progress::-moz-progress-bar {
   aspect-ratio: 1/1;
   width: 100%;
 }
-.fast_start .start-text {
+.fast_start .fast_start-text {
   display: flex;
 }
-.fast_start .section_procent {
+.fast_start .fast__start-procents {
   margin-top: 50px;
   align-items: center;
   display: grid;
@@ -410,7 +410,7 @@ progress::-moz-progress-bar {
   padding-right: 18px;
 }
 @media (max-width: 500px) {
-  .fast_start .section_procent {
+  .fast_start .fast__start-procents {
     margin-top: 20px;
   }
   .fast_start .procent_text-style {
@@ -508,31 +508,31 @@ progress::-moz-progress-bar {
 .take_proff-now .benefits img {
   margin-bottom: 30px;
 }
-.take_proff-now .practice-img {
+.take_proff-now .practice__img {
   grid-area: icon1;
 }
-.take_proff-now .practice-h4 {
+.take_proff-now .practice__title {
   grid-area: benefit1;
 }
-.take_proff-now .practice-p {
+.take_proff-now .practice__description {
   grid-area: description1;
 }
-.take_proff-now .modern-img {
+.take_proff-now .modern__img {
   grid-area: icon2;
 }
-.take_proff-now .modern-h4 {
+.take_proff-now .modern__title {
   grid-area: benefit2;
 }
-.take_proff-now .modern-p {
+.take_proff-now .modern__description {
   grid-area: description2;
 }
-.take_proff-now .sertificate-img {
+.take_proff-now .sertificate__img {
   grid-area: icon3;
 }
-.take_proff-now .sertificate-h4 {
+.take_proff-now .sertificate__title {
   grid-area: benefit3;
 }
-.take_proff-now .sertificate-p {
+.take_proff-now .sertificate__description {
   grid-area: description3;
 }
 @media (max-width: 560px) {
@@ -838,7 +838,7 @@ progress::-moz-progress-bar {
   background-size: cover;
 }
 
-@media (max-width: 1140px) {
+@media (max-width: 1200px) {
   .up_background_image {
     height: 100%;
     background-position: center center;
@@ -887,6 +887,11 @@ h1 {
   line-height: 1.4;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
 @media (max-width: 780px) {
   h1 {
     font-size: 3rem;

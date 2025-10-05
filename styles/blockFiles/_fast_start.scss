@@ -20,11 +20,11 @@
     width: 100%;
   }
 
-  .start-text {
+  .fast_start-text {
     display: flex;
   }
   
-  .section_procent {
+  .fast__start-procents {
     margin-top: 50px;
     align-items: center;
     display: grid;
@@ -44,7 +44,7 @@
   
 
   @media (max-width: 500px) {
-    .section_procent {
+    .fast__start-procents {
       margin-top: 20px;
     }
     .procent_text-style {

@@ -6,7 +6,7 @@
   <meta name="description" content="Описание страницы" />
   <meta 
     name="keywords"
-    content="Ключевое слово 1, ключевое слово 2, ключевое слово 3" />
+    content="Сборка компьютеров, Курсы по сборке компьютеров, Актуальная профессия" />
   <link rel="stylesheet" href="styles/main.css">
   <script src="scripts/timer.js"></script>
   <title>First Course</title>
@@ -16,7 +16,7 @@
   <a href="#main-content" class="skip-link visually-hidden">Перейти к основному содержанию</a>
   <div class="up_background_image">
     <header class="header">
-      <nav class="header__nav" role="navigation">
+      <nav class="header__nav" role="navigation" aria-label="Основная навигация">
         <a href="#" role="button" aria-label="Перейти на главную страницу">
           <img 
           src="assets/Group.svg" 
@@ -46,6 +46,7 @@
         <div class="dropdown">
           <button class="burger__button" aria-label="Открыть мобильное меню">Меню</button>
           <div class="dropdown-content">
+            <a href="#" class="button-link" aria-label="Зайти в кабинет">Зайти в кабинет</a>
             <a href="#benefits-title" class="button-link" aria-label="Перейти к курсам">Курсы</a>
             <a href="#training-title" class="button-link" aria-label="Перейти к расписанию">Расписание</a>
             <a href="#teachers-title" class="button-link" aria-label="Перейти к преподавателям">Преподаватели</a>
@@ -53,11 +54,11 @@
             <a href="#contacts-link" class="button-link" aria-label="Перейти к контактам">Контакты</a>
           </div>
         </div>
-        
+
         <button class="header__button button">
           <a href="#" class="button-link">Зайти в кабинет</a>
         </button>
-        
+
       </nav>
     </header>
 
@@ -65,56 +66,58 @@
 
     <main id="main-content">
       <div class="container">
-        <div class="block-text">
-          <h1 class="text-info">Первый курс<br>по компьютерной сборке</h1>
-        </div>
-        <div class="block-timer">
-          <div class="timer" aria-label="Обратный отсчет до начала курса" aria-live="polite">
-            <div class="timer-days timer-block">
-              <p class="timer__number days">00</p>
-              <p class="timer-text">Дней</p>
-            </div>
-            <div class="timer-hours timer-block">
-              <p class="timer__number hours">00</p>
-              <p class="timer-text">Часов</p>
-            </div>
-            <div class="timer-minutes timer-block">
-              <p class="timer__number minutes">00</p>
-              <p class="timer-text">Минут</p>
-            </div>
-            <div class="timer-seconds timer-block">
-              <p class="timer__number seconds">00</p>
-              <p class="timer-text">Секунд</p>
-            </div>
+        <section class="block__timer">
+          <div class="block-text">
+            <h1 class="block__title">Первый курс<br>по компьютерной сборке</h1>
           </div>
-        </div>
-      </div>
-      <section class="section" aria-label="Статистика курса">
-        <div class="container">
-          <div class="section__students">
-
-            <a href="#" role="button">
-              <button class="buttom-button button button-link">Заказать курс</button>
-            </a>
-
-            <div class="students__education">
-              <p class="students-text">Учеников всего: <span class="students-number">200</span></p>
-              <p class="students-text">Успешно закончили курс: <span class="students-number">190</span></p>
-            </div>
-
-            <div class="section__progress">
-                <p class="students-text">Заработано учениками: <span class="students-number">400 000₽</span></p>
-                <progress max="1000000" value="400000" aria-label="Прогресс заработка учеников"></progress>
-              <div class="progress-spread">
-                <p class="spread-number">0</p>
-                <p class="spread-number">1 000 000₽</p>
+          <div>
+            <div class="timer" aria-label="Обратный отсчет до начала курса" aria-live="polite">
+              <div class="timer-days timer-block">
+                <p class="timer__number days">00</p>
+                <p class="timer-text">Дней</p>
               </div>
-            </div>
-
+              <div class="timer-hours timer-block">
+                <p class="timer__number hours">00</p>
+                <p class="timer-text">Часов</p>
+              </div>
+              <div class="timer-minutes timer-block">
+                <p class="timer__number minutes">00</p>
+                <p class="timer-text">Минут</p>
+              </div>
+              <div class="timer-seconds timer-block">
+                <p class="timer__number seconds">00</p>
+                <p class="timer-text">Секунд</p>
+              </div>
             </div>
           </div>
         </section>
-    </div> 
+
+      </div>
+
+        <section class="section" aria-label="Статистика курса">
+          <div class="container">
+            <div class="section__students">
+              <a href="#" role="button">
+                <button class="buttom-button button button-link">Заказать курс</button>
+              </a>
+
+              <div class="students__education">
+                <p class="students-text">Учеников всего: <span class="students-number">200</span></p>
+                <p class="students-text">Успешно закончили курс: <span class="students-number">190</span></p>
+              </div>
+
+              <div class="students__progress">
+                  <p class="students-text">Заработано учениками: <span class="students-number">400 000₽</span></p>
+                  <progress max="1000000" value="400000" aria-label="Прогресс заработка учеников"></progress>
+                <div class="progress-spread">
+                  <p class="spread-number">0</p>
+                  <p class="spread-number">1 000 000₽</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div> 
 
       <div class="container">
         <section class="about__company" aria-labelledby="about_company-title">
@@ -131,8 +134,8 @@
           </div>
         </section>
 
-        <section class="fast_start" aria-labelledby="start-title">
-          <div class="start-text">
+        <section class="fast_start" aria-labelledby="fast_start-title">
+          <div class="fast_start-text">
             <div class="start-semicircle">
               <img 
               class="semicircle_img"
@@ -141,10 +144,10 @@
               role="presentation"
               >
             </div>
-            <h2 id="start-title">Быстрый старт</h2>
+            <h2 id="fast_start-title">Быстрый старт</h2>
           </div>
           <p class="start_back-text">Больше 90% учеников прошли полный курс и смогли<br> собрать свой первый компьютер</p>
-          <div class="section_procent">
+          <div class="fast__start-procents">
             <h3 class="procent-100">100%</h3>
             <div class="procent-100-block procent-block"></div>
             <p class="procent-100-text procent_text-style">Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit. Netus eget velit quisque<br> accumsan amet tortor. Velit, volutpat egestas<br> fringilla mi porttitor tempus. Placerat dui.</p>
@@ -168,28 +171,28 @@
           <h2 id="benefits-title">Получите профессию прямо сейчас!</h2>
           <div class="benefits">
               <img 
-              class="practice-img"
+              class="practice__img"
               src="assets/icons/icon_computer.svg" 
               alt=""
               >
-              <h4 class="practice-h4">Только практические навыки в работе</h4>
-              <p class="practice-p skils_parag">Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit. Netus eget velit quisque accumsan<br> amet tortor. Velit, volutpat egestas fringilla mi<br> porttitor tempus. Placerat dui.</p>
+              <h4 class="practice__title">Только практические навыки в работе</h4>
+              <p class="practice__description skils_parag">Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit. Netus eget velit quisque accumsan<br> amet tortor. Velit, volutpat egestas fringilla mi<br> porttitor tempus. Placerat dui.</p>
 
               <img 
-              class="modern-img"
+              class="modern__img"
               src="assets/icons/icon_flesh.svg" 
               alt=""
               >
-              <h4 class="modern-h4">Работа на самом современном оборудовании</h4>
-              <p class="modern-p skils_parag">Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit. Netus eget velit quisque accumsan<br> amet tortor. Velit, volutpat egestas fringilla mi<br> porttitor tempus. Placerat dui.</p>
+              <h4 class="modern__title">Работа на самом современном оборудовании</h4>
+              <p class="modern__description skils_parag">Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit. Netus eget velit quisque accumsan<br> amet tortor. Velit, volutpat egestas fringilla mi<br> porttitor tempus. Placerat dui.</p>
 
               <img 
-              class="setificate-img"
+              class="setificate__img"
               src="assets/icons/icon_USB.svg" 
               alt=""
               >
-              <h4 class="sertificate-h4">Сертификация по окончании обучения</h4>
-              <p class="sertificate-p skils_parag">Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit. Netus eget velit quisque accumsan<br> amet tortor. Velit, volutpat egestas fringilla mi<br> porttitor tempus. Placerat dui.</p>
+              <h4 class="sertificate__title">Сертификация по окончании обучения</h4>
+              <p class="sertificate__description skils_parag">Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit. Netus eget velit quisque accumsan<br> amet tortor. Velit, volutpat egestas fringilla mi<br> porttitor tempus. Placerat dui.</p>
           </div>
         </section>
 

@@ -20,7 +20,7 @@
   background-size: cover;
 }
 
-@media (max-width: 1140px) {
+@include m.respond-to(large) {
   .up_background_image {
     height: 100%;
     background-position: center center;
@@ -62,7 +62,7 @@ body {
 
 
 [class*="container"] {
-  max-width: 67.7%;
+  max-width: v.$container-max-width;
   margin-inline: auto;
 }
 
@@ -71,6 +71,12 @@ h1 {
   font-size: 4rem;
   font-weight: 600;
   line-height: 1.4;
+}
+
+@include m.respond-to(tablet) {
+  h1 {
+    font-size: 3rem
+  }
 }
 
 @media (max-width: 780px) {

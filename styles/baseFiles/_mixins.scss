@@ -1,11 +1,12 @@
 @use './variables' as vb;
+@use 'sass:map';
 
 // breakpoints
-@mixin respond-to($breakpoints) {
+@mixin respond-to($breakpoint) {
 
-  @if map-has-key(vb.$breakpoints, $breakpoints) {
+  @if map.has-key(vb.$breakpoints, $breakpoint) {
 
-    @media (max-width: map-get(vb.$breakpoints)) {
+    @media (max-width: map.get(vb.$breakpoints, $breakpoint)) {
 
       @content;
     }
@@ -38,5 +39,5 @@
 
 // spacing
 @mixin spacing($property, $size) {
-  #{$property}: map-get(vb.$spacing, $size)
+  #{$property}: map-get(vb.$spacing, $size);
 }

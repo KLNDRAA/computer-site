@@ -23,13 +23,13 @@ const timer = setInterval(function() {
 
     const daysEl = document.querySelector('.days').innerText = days;
     const hoursEl = document.querySelector('.hours').innerText = hours;
-    const minuetsEl = document.querySelector('.minutes').innerText = minutes;
+    const minutesEl = document.querySelector('.minutes').innerText = minutes;
     const secondsEl = document.querySelector('.seconds').innerText = seconds;
 
     if (daysEl && hoursEl && minuetsEl && secondsEl) {
         daysEl.innerText = days;
         hoursEl.innerText = hours;
-        minuetsEl.innerText = minutes;
+        minutesEl.innerText = minutes;
         secondsEl.innerText = seconds;
     }
 
