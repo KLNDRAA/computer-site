@@ -318,7 +318,7 @@ progress::-moz-progress-bar {
   margin-left: 130px;
 }
 
-.text-parag {
+.about__company-discription {
   line-height: 1.6;
   margin-top: 45px;
 }
@@ -344,7 +344,7 @@ progress::-moz-progress-bar {
   aspect-ratio: 446/446;
 }
 
-@media (max-width: 758px) {
+@media (max-width: 768px) {
   .box {
     position: relative;
     max-width: 530px;
@@ -363,6 +363,19 @@ progress::-moz-progress-bar {
     margin-top: 68px;
   }
 }
+@media (max-width: 1200px) {
+  .about__company {
+    flex-flow: row wrap;
+  }
+  .company-text {
+    margin-left: 0px;
+    margin-top: 50px;
+  }
+  .about__company-discription {
+    font-size: 0.8rem;
+    margin-top: 25px;
+  }
+}
 @media (max-width: 1171px) {
   .about__company {
     flex-flow: row wrap;
@@ -372,7 +385,7 @@ progress::-moz-progress-bar {
     margin-left: 0px;
     margin-top: 50px;
   }
-  .text-parag {
+  .about__company-discription {
     font-size: 0.8rem;
     margin-top: 25px;
   }

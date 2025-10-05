@@ -1,4 +1,5 @@
 @use '../baseFiles/variables' as v;
+@use '../baseFiles/mixins' as m;
 
 .about__company {
   display: flex;
@@ -8,7 +9,8 @@
 .company-text {
   margin-left: 130px;
 }
-.text-parag {
+
+.about__company-discription {
   line-height: 1.6;
   margin-top: 45px
 }
@@ -34,22 +36,36 @@
   aspect-ratio: 446 / 446;
 }
 
-@media (max-width: 758px) {
+@include m.respond-to(tablet) {
   .box {
-  position: relative;
-  max-width: max(27,6%, 530px);
-  width: 100%;
-  aspect-ratio: 530 / 500;
-  background-color: rgb(v.$white-color-1, 0);
-  border: 15px solid;
-  border-image: linear-gradient(to right, v.$gradientButtonOne) 1;
+    position: relative;
+    max-width: max(27,6%, 530px);
+    width: 100%;
+    aspect-ratio: 530 / 500;
+    background-color: rgb(v.$white-color-1, 0);
+    border: 15px solid;
+    border-image: linear-gradient(to right, v.$gradientButtonOne) 1;
   }
   .computer_rtx {
     position: absolute;
-    top: 40px;
+    @include m.spacing(top, mlg);
   }
+  .about__company { 
+    margin-top: calc(18px + 50px);
+  }
+}
+
+@include m.respond-to(large) {
   .about__company {
-    margin-top: calc(18px + 50px)
+    flex-flow: row wrap;
+  }
+  .company-text {
+    @include m.spacing(margin-left, zr);
+    @include m.spacing(margin-top, lg);
+  }
+  .about__company-discription {
+    font-size: 0.8rem;
+    margin-top: 25px;
   }
 }
 
@@ -62,7 +78,7 @@
     margin-left: 0px;
     margin-top: 50px;
   }
-  .text-parag {
+  .about__company-discription {
     font-size: 0.8rem;
     margin-top: 25px;
   }
